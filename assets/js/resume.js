@@ -1,10 +1,11 @@
+// import * as $ from 'jquery';
 
-setTimeout(()=>{ 
+setTimeout(() => {
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+
+    if (window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && window.location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
@@ -17,7 +18,7 @@ setTimeout(()=>{
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(()=> {
+  $('.js-scroll-trigger').click(() => {
     $('.navbar-collapse').collapse('hide');
   });
 
